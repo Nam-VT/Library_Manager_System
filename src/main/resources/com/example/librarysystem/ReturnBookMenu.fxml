@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.ReturnBook">
+   <children>
+      <TableView fx:id="return_tableView" layoutX="405.0" layoutY="33.0" prefHeight="567.0" prefWidth="581.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="405.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="33.0">
+        <columns>
+          <TableColumn fx:id="col_StudentName" prefWidth="130.0" text="Student Name" />
+          <TableColumn fx:id="col_BookName" prefWidth="150.0" text="Book Name" />
+            <TableColumn fx:id="col_IssueDate" minWidth="0.0" prefWidth="150.0" text="Issue Date" />
+            <TableColumn fx:id="col_DueDate" minWidth="7.0" prefWidth="150.0" text="Due Date" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txt_bookid" layoutX="130.0" layoutY="190.0" prefHeight="30.0" prefWidth="184.0" />
+      <Label layoutX="30.0" layoutY="190.0" prefHeight="30.0" prefWidth="75.0" text="Book ID:">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="250.0" prefHeight="30.0" prefWidth="75.0" text="Student ID:">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_studentid" layoutX="130.0" layoutY="258.0" prefHeight="30.0" prefWidth="184.0" />
+      <Button fx:id="Return" layoutX="181.0" layoutY="394.0" mnemonicParsing="false" onAction="#deleteSelectedRow" text="Return" />
+      <AnchorPane layoutY="-6.0" prefHeight="36.0" prefWidth="986.0" AnchorPane.bottomAnchor="564.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="Back" mnemonicParsing="false" onAction="#buttonBackActionPerformed" prefHeight="30.0" prefWidth="65.0" text="Back" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="921.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="Exit" layoutX="921.0" mnemonicParsing="false" onAction="#buttonExitActionPerformed" prefHeight="30.0" prefWidth="65.0" text="Exit" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="921.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="Find" layoutX="181.0" layoutY="335.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Find" />
+   </children>
+</AnchorPane>

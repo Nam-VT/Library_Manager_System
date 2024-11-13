@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarysystem.AvailableBooks">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="30.0" prefHeight="570.0" prefWidth="351.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="636.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Label layoutX="20.0" layoutY="140.0" prefHeight="30.0" prefWidth="50.0" text="TITLE:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="200.0" prefHeight="30.0" prefWidth="50.0" text="TYPE:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="260.0" prefHeight="30.0" prefWidth="70.0" text="AUTHOR:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="320.0" prefHeight="30.0" prefWidth="80.0" text="QUANTITY:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="380.0" prefHeight="30.0" prefWidth="50.0" text="DATE:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_title" layoutX="110.0" layoutY="140.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="txt_type" layoutX="110.0" layoutY="200.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="txt_author" layoutX="110.0" layoutY="260.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="txt_quantity" layoutX="110.0" layoutY="320.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="txt_date" layoutX="110.0" layoutY="380.0" prefHeight="25.0" prefWidth="200.0" promptText="Please use yyyy-MM-dd." />
+            <TextField fx:id="txt_ID" layoutX="110.0" layoutY="440.0" prefHeight="25.0" prefWidth="200.0" />
+            <Button fx:id="SaveBooks" layoutX="60.0" layoutY="490.0" mnemonicParsing="false" onAction="#buttonAddActionPerformed" onMouseDragEntered="#buttonAddActionPerformed" text="Save" />
+            <Button fx:id="UpdateBooks" layoutX="154.0" layoutY="490.0" mnemonicParsing="false" onAction="#buttonUpdateActionPerformed" onMouseDragEntered="#buttonUpdateActionPerformed" text="Update" />
+            <Button fx:id="DeleteBooks" layoutX="276.0" layoutY="490.0" mnemonicParsing="false" onAction="#buttonDeleteActionPerformed" onMouseDragEntered="#buttonDeleteActionPerformed" text="Delete" />
+            <Label layoutX="20.0" layoutY="440.0" prefHeight="30.0" prefWidth="60.0" text="Book ID:">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+
+
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="405.0" layoutY="30.0" prefHeight="570.0" prefWidth="573.0">
+         <children>
+            <TableView fx:id="availableBooks_tableView" layoutX="-51.2" layoutY="23.0" prefHeight="570.0" prefWidth="633.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-51.0" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="col_title" minWidth="0.0" prefWidth="120.0" text="TITLE" />
+                <TableColumn fx:id="col_type" prefWidth="120.0" text="TYPE" />
+                  <TableColumn fx:id="col_author" prefWidth="130.0" text="AUTHOR" />
+                  <TableColumn fx:id="col_quantity" text="QUANTITY" />
+                  <TableColumn fx:id="col_date" prefWidth="121.0" text="DATE" />
+                  <TableColumn fx:id="col_id" prefWidth="60.0" text="ID" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="128.0" layoutY="-2.0" prefHeight="30.0" prefWidth="986.0" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="X" layoutX="925.0" layoutY="-1.0" mnemonicParsing="false" onAction="#buttonXActionPerformed" prefHeight="30.0" prefWidth="60.0" text="Exit" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="925.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" />
+            <Button fx:id="Back" mnemonicParsing="false" onAction="#buttonBackActionPerformed" prefHeight="30.0" prefWidth="60.0" text="Back" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
